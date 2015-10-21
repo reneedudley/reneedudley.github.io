@@ -1,9 +1,23 @@
-<!DOCTYPE html>
 <html>
-<head>
-	<title></title>
-</head>
-<body>
- 	<h1> hello </h1>
-</body>
+  <head>
+  </head>
+  <body>
+    <div id="box" style="height: 200px; width: 200px; background-color:blue"></div>
+    <span id="counter"></span>
+    <!-- load jQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+    <script>
+      // when the document is done loading, run the script inside
+      $(document).ready(function() {
+        var num = 0;
+        var counter = $('#counter');
+
+        $('#box').mouseenter(function(){
+          num++;
+          counter.text(num);
+        })
+
+      });
+    </script>
+  </body>
 </html>
