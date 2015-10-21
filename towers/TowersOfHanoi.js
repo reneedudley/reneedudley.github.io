@@ -1,7 +1,16 @@
 $(document).ready(function() {
+	var $lastChild = null;
+
 	$('[data-stack]').click(function(){
 		// console.log($(this).attr('data-stack'));
-		var $lastChild= $(this).children().last().detach(); 
-		console.log($lastChild);
+		if (!$lastChild){  
+		 $lastChild= $(this).children().last().detach(); 
+
+		}
+		else {
+			$(this).append($lastChild);
+			$lastChild= null;
+		}
+
 	});
 });
