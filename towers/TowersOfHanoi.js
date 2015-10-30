@@ -11,6 +11,9 @@ $(document).ready(function() {
 			$(this).append($lastChild);
 			$lastChild= null;
 		}
+		//parseInt to turn a string into a number
 
+	// if (){
+	// 	$lastChild= $(this).children().last().attr('data-block') > $lastChildren.attr('data-block')	|| $(this).children().length===0}
 	});
 });
