@@ -28,7 +28,15 @@ header[role="banner"] #logo-main {
   padding-left: 30px;
   padding-right: 30px;
 }
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+}
 
+.navbar .navbar-collapse {
+  text-align: center;
+}
 #home-background{
   background-image: url('homeback.jpg');
   height: 400px;
