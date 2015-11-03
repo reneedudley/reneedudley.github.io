@@ -38,9 +38,9 @@ header[role="banner"] #logo-main {
   text-align: center;
 }
 #home-background{
-  background-image: url('homeback.jpg');
-  height: 400px;
+  background-image: url("http://s3.postimg.org/o0amkw51v/wedding_hairstyle_popular_vintage_wedding_hairst.jpg");
+  height: 1000px;
   width:100%;
-  background-repeat: repeat-y; /* for vertical repeat */
-  background-repeat: repeat-x; /* for horizontal repeat */
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
