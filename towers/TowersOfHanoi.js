@@ -12,8 +12,17 @@ $(document).ready(function() {
 			$lastChild= null;
 		}
 		//parseInt to turn a string into a number
-
+		});
 	// if (){
 	// 	$lastChild= $(this).children().last().attr('data-block') > $lastChildren.attr('data-block')	|| $(this).children().length===0}
-	});
+	
+	function isLegal(stack){
+	if ($stack.children().length===0 || parseInt($stack.children().last().attr('data-block')) < parseInt($(block).attr('data-block'))){
+		return true; 
+	}
+	else {
+		return false;
+	}
+}
 });
+
