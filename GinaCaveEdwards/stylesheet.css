@@ -1,3 +1,9 @@
+#top{
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+  letter-spacing: 4px;
+}
+
 #left{
     float:left;
    
@@ -13,7 +19,7 @@ header[role="banner"] #logo-main {
   margin: 20px auto;
 }
 #navbar-primary.navbar-default {
-  background: transparent;
+
   border: none;
 }
 #navbar-primary.navbar-default .navbar-nav {
@@ -39,8 +45,11 @@ header[role="banner"] #logo-main {
 }
 #home-background{
   background-image: url("http://s3.postimg.org/o0amkw51v/wedding_hairstyle_popular_vintage_wedding_hairst.jpg");
-  height: 1000px;
+  height: 800px;
   width:100%;
   background-repeat: no-repeat;
   background-size: 100% 100%;
+}
+#hair{
+  
 }
