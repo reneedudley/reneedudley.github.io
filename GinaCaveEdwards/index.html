@@ -4,6 +4,11 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
   <link rel="stylesheet" href="stylesheet.css"/>
   <link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'/>
 
@@ -11,33 +16,288 @@
 </head>
 
 <body>
-<!-- Header and Nav Bar -->
-<nav class="navbar navbar-inverse">
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
-        <span class="icon-bar"></span> 
+        <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="#">Gina Cave Edwards</a>
+      <a class="navbar-brand" href="#myPage" style="letter-spacing:5px;">Gina Cave Edwards</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li> 
-        <li><a href="#">Shop</a></li> 
-        <li><a href="#">Contact</a></li> 
-      </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <li><a href="#overview">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#shop">Shop</a></li>
+        <li><a href="#myCarousel">Gallery</a></li>
+        <li><a href="#contact">CONTACT</a></li> 
+          </ul>
+        </li>
       </ul>
     </div>
   </div>
 </nav>
 
+
+
+<!-- Container (Overview) -->
+<div id="overview" class="container text-center">
+  <h3>Gina Cave Edwards</h3>
+  <p><em>Hair and Beauty</em></p>
+  <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <br>
+  <div class="row">
+    <div class="col-sm-12">
+      <img src="http://s3.postimg.org/o0amkw51v/wedding_hairstyle_popular_vintage_wedding_hairst.jpg" style="width:100%" class="img-responsive">
+      </div>
+    </div>
+    
+    </div>
+  
+<!-- Container (Services) -->
+<div class="container-fluid text-center" id="services">
+ 	<div class="col-sm-12" >
+ 		<h1 style="color:#98989E"> Hair Stylist Austin </h1>
+ 	</div>
+ 	<div class="col-sm-12" >  
+ 		 <h3 style="color:white;">Services</h3>
+  			<p><em>Hair and Beauty</em></p>
+  	</div>
+  	<div class="col-sm-4"> 
+  		<h3 style="font-size:15px;"> Cut </h3>
+  		<p style="color:#525252"> Long Cut 100 </p>
+  		<p style="color:#525252"> Medium 80 </p>
+  		<p style="color:#525252"> Short 60 </p>
+  		<p style="color:#525252"> Men's 40</p>
+  	</div>
+  	<div class="col-sm-4"> 
+  		<h3 style="font-size:15px;"> Color </h3>
+  		<p style="color:#525252"> Full Highlights 200 </p>
+  		<p style="color:#525252"> Partial Highlights 150 </p>
+  		<p style="color:#525252"> Ombre 100  </p>
+  		<p style="color:#525252"> Ballyage 100</p>
+  	</div>
+  	<div class="col-sm-4"> 
+  		<h3 style="font-size:15px;"> Style </h3>
+  		<p style="color:#525252"> Wedding 300 </p>
+  		<p style="color:#525252"> Blowout 150 </p>
+  		<p style="color:#525252"> Updo 160  </p>
+  		<p style="color:#525252"> Straightening/Curling 300</p>
+  	</div>
+  <br>
+  
+
+    
+</div>
+  
+
+<!-- Container (shop) -->
+<div id="shop" >
+  <div class="container">
+    <h3 class="text-center">Shop</h3>
+    
+    <div class="row text-center">
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="http://content.mycutegraphics.com/graphics/health/conditioner.png" alt="Conditioner" style="witdh:50px;height:100px;">
+          <p><strong>Conditioner</strong></p>
+          <p style="font-weight:light;">Moisturizing and shit</p>
+          <button class="btn" data-toggle="modal" data-target="#myModal">Buy</button>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+           <img src="http://content.mycutegraphics.com/graphics/health/conditioner.png" alt="Conditioner" style="witdh:50px;height:100px;">
+          <p><strong>Other Conditioner</strong></p>
+          <p>More Conditioner</p>
+          <button class="btn" data-toggle="modal" data-target="#myModal">Buy</button>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+           <img src="http://content.mycutegraphics.com/graphics/health/conditioner.png" alt="Conditioner" style="witdh:50px;height:100px;">
+          <p><strong>Shampoo</strong></p>
+          <p>Love good shampoo</p>
+          <button class="btn" data-toggle="modal" data-target="#myModal">Buy</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4><span class="glyphicon glyphicon-lock"></span> Products!</h4>
+        </div>
+        <div class="modal-body">
+          <form role="form">
+            <div class="form-group">
+              <label for="psw"><span class="glyphicon glyphicon-shopping-cart"></span> $23</label>
+              <input type="number" class="form-control" id="psw" placeholder="How many?">
+            </div>
+            <div class="form-group">
+              <label for="usrname"><span class="glyphicon glyphicon-user"></span> Recipt </label>
+              <input type="text" class="form-control" id="usrname" placeholder="Enter email">
+            </div>
+              <button type="submit" class="btn btn-block">Pay 
+                <span class="glyphicon glyphicon-ok"></span>
+              </button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
+            <span class="glyphicon glyphicon-remove"></span> Cancel
+          </button>
+          <p>Need <a href="#">help?</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--  Gallery -->
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+    <li data-target="#myCarousel" data-slide-to="3"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <img src="http://cdnstatic.visualizeus.com/thumbs/11/b3/color,girl,grass,hair,photography,vintage-11b3e9259f372d966e83aa17bc47972f_h.jpg" alt="Chania">
+    </div>
+
+    <div class="item">
+      <img src="http://ciara-richardson.com/images/blog-images/2012/Fashion/Fall%20Bridal%20Hair/ciara_richardson_photography_utah_wedding_FALL_HAIR_TRENDS_15.jpg" alt="Chania">
+    </div>
+
+    <div class="item">
+      <img src="http://s2.favim.com/orig/34/flowers-hair-photography-rollers-tea-Favim.com-272160.jpg" alt="Flower">
+    </div>
+
+    <div class="item">
+      <img src="http://wedding-pictures.onewed.com/match/images/26759/bridal-hairstyles-all-up-updo-swept-back-babies-breath-throughout-curls.original.jpg" alt="Flower">
+    </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+<!-- Container (Contact Section) -->
+<div id="contact" class="container">
+  <h3 class="text-center">Contact</h3>
+  <p class="text-center"><em> Book an appointment today! </em></p>
+
+  <div class="row">
+    <div class="col-md-4">
+      <p>We love hearing from you</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span>Austin, TX</p>
+      <p><span class="glyphicon glyphicon-phone"></span>Phone: 1515151515</p>
+      <p><span class="glyphicon glyphicon-envelope"></span>Email: mail@mail.com</p>	   
+    </div>
+    <div class="col-md-8">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
+      <br>
+      <div class="row">
+        <div class="col-md-12 form-group">
+          <button class="btn pull-right" type="submit">Send</button>
+        </div>
+      </div>	
+    </div>
+  </div>
+  <br>
+  
+
+<div id="googleMap"></div>
+
+<!-- Add Google Maps -->
+<script src="http://maps.googleapis.com/maps/api/js"></script>
+<script>
+var myCenter = new google.maps.LatLng(30.310915, -97.742282);
+
+function initialize() {
+var mapProp = {
+center:myCenter,
+zoom:12,
+scrollwheel:false,
+draggable:false,
+mapTypeId:google.maps.MapTypeId.ROADMAP
+};
+
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+var marker = new google.maps.Marker({
+position:myCenter,
+});
+
+marker.setMap(map);
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+
+<!-- Footer -->
+<footer class="text-center">
+  <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a><br><br>
+  
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Initialize Tooltip
+  $('[data-toggle="tooltip"]').tooltip(); 
+  
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+    // Prevent default anchor click behavior
+    event.preventDefault();
+
+    // Store hash
+    var hash = this.hash;
+
+    // Using jQuery's animate() method to add smooth page scroll
+    // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+    $('html, body').animate({
+      scrollTop: $(hash).offset().top
+    }, 900, function(){
+   
+      // Add hash (#) to URL when done scrolling (default click behavior)
+      window.location.hash = hash;
+    });
+  });
+})
+</script>
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
