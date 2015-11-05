@@ -11,18 +11,20 @@ $(function() {
 			$(this).append($lastChild);
 			$lastChild= null;
 		}
-		//parseInt to turn a string into a number
+		
+		function isLegal(){
+			
+			if ($('[data-stack]').children().length===0 || parseInt($('[data-stack]').children().last().attr('data-block')) < parseInt($(this).children().last().detach())){
+				return true; 
+			}
+			else {
+				return false;
+			}
+		};
+
 		});
-	// if (){
-	// 	$lastChild= $(this).children().last().attr('data-block') > $lastChildren.attr('data-block')	|| $(this).children().length===0}
-	
-	function isLegal(stack){
-	if ($stack.children().length===0 || parseInt($stack.children().last().attr('data-block')) < parseInt($(block).attr('data-block'))){
-		return true; 
-	}
-	else {
-		return false;
-	}
-}
+		
+		
+
 });
 
