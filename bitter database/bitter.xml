@@ -41,15 +41,15 @@
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
-<row name="user name" null="1" autoincrement="0">
-<datatype>MEDIUMTEXT</datatype>
-<default>NULL</default></row>
-<row name="password" null="1" autoincrement="0">
-<datatype>MEDIUMTEXT</datatype>
-<default>NULL</default></row>
-<row name="email" null="1" autoincrement="0">
-<datatype>MEDIUMTEXT</datatype>
-<default>NULL</default></row>
+<row name="user name" null="0" autoincrement="0">
+<datatype>VARCHAR</datatype>
+<default>'NULL'</default></row>
+<row name="password" null="0" autoincrement="0">
+<datatype>VARCHAR</datatype>
+<default>'NULL'</default></row>
+<row name="email" null="0" autoincrement="0">
+<datatype>VARCHAR</datatype>
+<default>'NULL'</default></row>
 <key type="PRIMARY" name="">
 <part>id</part>
 </key>
@@ -58,63 +58,32 @@
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
-<row name="user_id" null="1" autoincrement="0">
+<row name="user_id" null="0" autoincrement="0">
 <datatype>INTEGER</datatype>
 <default>NULL</default><relation table="user" row="id" />
 </row>
-<row name="content" null="1" autoincrement="0">
+<row name="content" null="0" autoincrement="0">
 <datatype>MEDIUMTEXT</datatype>
-<default>NULL</default></row>
+<default>'NULL'</default></row>
 <key type="PRIMARY" name="">
 <part>id</part>
 </key>
 </table>
-<table x="869" y="173" name="likes">
+<table x="720" y="232" name="post_user">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
-<row name="user_id" null="1" autoincrement="0">
+<row name="user_id" null="0" autoincrement="0">
 <datatype>INTEGER</datatype>
 <default>NULL</default><relation table="user" row="id" />
 </row>
-<row name="post_id" null="1" autoincrement="0">
+<row name="post_id" null="0" autoincrement="0">
 <datatype>INTEGER</datatype>
 <default>NULL</default><relation table="posts" row="id" />
 </row>
 <key type="PRIMARY" name="">
 <part>id</part>
 </key>
-</table>
-<table x="750" y="335" name="post_like">
-<row name="id" null="1" autoincrement="1">
-<datatype>INTEGER</datatype>
-<default>NULL</default></row>
-<row name="post_id" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default><relation table="posts" row="id" />
-</row>
-<row name="like_id" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default><relation table="likes" row="id" />
-</row>
-<key type="PRIMARY" name="">
-<part>id</part>
-</key>
-</table>
-<table x="525" y="372" name="user_like">
-<row name="id" null="1" autoincrement="1">
-<datatype>INTEGER</datatype>
-<default>NULL</default></row>
-<row name="user_id" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default><relation table="user" row="id" />
-</row>
-<row name="like_id" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default><relation table="likes" row="id" />
-</row>
-<key type="PRIMARY" name="">
-<part>id</part>
-</key>
+<comment>aka like</comment>
 </table>
 </sql>

@@ -37,59 +37,62 @@
         <type label="SET" length="1" sql="SET" quote=""/>
         <type label="Bit" length="0" sql="bit" quote=""/>
     </group>
-</datatypes><table x="355" y="214" name="users">
+</datatypes><table x="101" y="334" name="users">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
-<row name="email" null="1" autoincrement="0">
+<row name="email" null="0" autoincrement="0">
 <datatype>MEDIUMTEXT</datatype>
-<default>NULL</default></row>
-<row name="name" null="1" autoincrement="0">
+<default>'NULL'</default></row>
+<row name="name" null="0" autoincrement="0">
 <datatype>MEDIUMTEXT</datatype>
-<default>NULL</default></row>
-<row name="password" null="1" autoincrement="0">
+<default>'NULL'</default></row>
+<row name="password" null="0" autoincrement="0">
 <datatype>MEDIUMTEXT</datatype>
-<default>NULL</default></row>
-<row name="user name" null="1" autoincrement="0">
+<default>'NULL'</default></row>
+<row name="user name" null="0" autoincrement="0">
 <datatype>MEDIUMTEXT</datatype>
-<default>NULL</default></row>
+<default>'NULL'</default></row>
+<row name="remember_token" null="0" autoincrement="0">
+<datatype>MEDIUMTEXT</datatype>
+<default>'NULL'</default></row>
 <key type="PRIMARY" name="">
 <part>id</part>
 </key>
 </table>
-<table x="590" y="82" name="Subbreddits">
+<table x="316" y="229" name="Subbreddits">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
-<row name="user_id" null="1" autoincrement="0">
+<row name="user_id" null="0" autoincrement="0">
 <datatype>INTEGER</datatype>
 <default>NULL</default><relation table="users" row="id" />
 </row>
-<row name="title" null="1" autoincrement="0">
+<row name="title" null="0" autoincrement="0">
 <datatype>MEDIUMTEXT</datatype>
-<default>NULL</default></row>
-<row name="description" null="1" autoincrement="0">
+<default>'NULL'</default></row>
+<row name="description" null="0" autoincrement="0">
 <datatype>MEDIUMTEXT</datatype>
-<default>NULL</default></row>
+<default>'NULL'</default></row>
 <key type="PRIMARY" name="">
 <part>id</part>
 </key>
 </table>
-<table x="848" y="168" name="posts">
+<table x="553" y="200" name="posts">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
-<row name="title" null="1" autoincrement="0">
+<row name="title" null="0" autoincrement="0">
 <datatype>MEDIUMTEXT</datatype>
-<default>NULL</default></row>
-<row name="content" null="1" autoincrement="0">
+<default>'NULL'</default></row>
+<row name="content" null="0" autoincrement="0">
 <datatype>MEDIUMTEXT</datatype>
-<default>NULL</default></row>
-<row name="subbreddit_id" null="1" autoincrement="0">
+<default>'NULL'</default></row>
+<row name="subbreddit_id" null="0" autoincrement="0">
 <datatype>INTEGER</datatype>
 <default>NULL</default><relation table="Subbreddits" row="id" />
 </row>
-<row name="user_id" null="1" autoincrement="0">
+<row name="user_id" null="0" autoincrement="0">
 <datatype>INTEGER</datatype>
 <default>NULL</default><relation table="users" row="id" />
 </row>
@@ -97,14 +100,14 @@
 <part>id</part>
 </key>
 </table>
-<table x="789" y="370" name="comments">
+<table x="628" y="423" name="comments">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
-<row name="content" null="1" autoincrement="0">
+<row name="content" null="0" autoincrement="0">
 <datatype>MEDIUMTEXT</datatype>
-<default>NULL</default></row>
-<row name="user_id" null="1" autoincrement="0">
+<default>'NULL'</default></row>
+<row name="user_id" null="0" autoincrement="0">
 <datatype>INTEGER</datatype>
 <default>NULL</default><relation table="users" row="id" />
 </row>
@@ -120,15 +123,15 @@
 <part>id</part>
 </key>
 </table>
-<table x="469" y="413" name="subbreddit_user">
+<table x="298" y="494" name="subbreddit_user">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
-<row name="user_id" null="1" autoincrement="0">
+<row name="user_id" null="0" autoincrement="0">
 <datatype>INTEGER</datatype>
 <default>NULL</default><relation table="users" row="id" />
 </row>
-<row name="subbreddit_id" null="1" autoincrement="0">
+<row name="subbreddit_id" null="0" autoincrement="0">
 <datatype>INTEGER</datatype>
 <default>NULL</default><relation table="Subbreddits" row="id" />
 </row>
