@@ -3,6 +3,12 @@
 
     $('.button-collapse').sideNav();
     $('.parallax').parallax();
-
+    $(window).scroll(function(){
+            if ($(this).scrollTop() > 200) {
+                $('#logo-container').fadeIn(500);
+            } else {
+                $('#logo-container').fadeOut(500);
+            }
+        });
   }); // end of document ready
 })(jQuery); // end of jQuery name space

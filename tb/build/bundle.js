@@ -1,48 +1,9 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-var Backbone = require('backbone');
-var TodoListView = require('./TodoListView.js');
-
-var TodoLayoutView = Backbone.View.extend({
-	el: '<div>\
-			<form>\
-				<input type="text">\
-				<input type = "submit" value="submit">\
-			</form>\
-			<div id="todos-container"></div>\
-			<span id="num-todos"> </span> Todos\
-		<div>',
-	render: function(){
-		// var todoListView = new todoListView({collection:this.collection});
-		// todoListView.render();
-		// this.$el.find('#todos-container').html(todoListView.el);
-		this.$el.find('#num-todos').text(this.collection.length);
-	}
-
-})
-module.exports = TodoLayoutView;
-
-
-},{"./TodoListView.js":2,"backbone":7}],2:[function(require,module,exports){
-var Backbone= require('backbone');
-var TodoListView = Backbone.View.extend({
-	el: '<li> </li>',
-	render: function(){
-		var that = this;
-		this.collection.each(function(todo){
-			var todoItemView = new TodoItemView({model:todo});
-			
-			that.collection.$el.append()
-		});
-	}
-});
-
-module.exports= TodoListView;
-},{"backbone":7}],3:[function(require,module,exports){
 'use strict';
 var $ = require ('jquery');
 var TodoModel = require('./models/TodoModel.js');
 var TodosCollection = require('./collections/TodosCollection.js');
-var TodoLayoutView = require('./Views/TodoLayoutView.js');
+var TodoLayoutView = require('./views/TodoLayoutView.js');
 
 $(function(){
 	var todo1 = new TodoModel({title:'walk the dog'});
@@ -54,7 +15,7 @@ $(function(){
 	$('#content').html(todoLayoutView.el);
 })
 
-},{"./Views/TodoLayoutView.js":1,"./collections/TodosCollection.js":4,"./models/TodoModel.js":5,"jquery":8}],4:[function(require,module,exports){
+},{"./collections/TodosCollection.js":2,"./models/TodoModel.js":3,"./views/TodoLayoutView.js":5,"jquery":9}],2:[function(require,module,exports){
 var TodoModel = require('../models/TodoModel.js');
 var Backbone = require('Backbone');
 var TodosCollection = Backbone.Collection.extend({
@@ -62,7 +23,7 @@ var TodosCollection = Backbone.Collection.extend({
 });
 
 module.exports = TodosCollection;
-},{"../models/TodoModel.js":5,"Backbone":6}],5:[function(require,module,exports){
+},{"../models/TodoModel.js":3,"Backbone":7}],3:[function(require,module,exports){
 var Backbone = require('Backbone');
 
 var ToDoModel = Backbone.Model.extend({
@@ -74,7 +35,104 @@ var ToDoModel = Backbone.Model.extend({
 module.exports = ToDoModel;
 
 
-},{"Backbone":6}],6:[function(require,module,exports){
+},{"Backbone":7}],4:[function(require,module,exports){
+var Backbone= require('backbone');
+
+var TodoItemView = Backbone.View.extend({
+	el: '<li></li>',
+
+	initialize: function(){
+		this.listenTo(this.model,'all',function(event){
+			console.log(event);
+		});
+	},
+	events: {
+		'click  input': 'toggleTodo'
+	},
+	toggleTodo: function(event){
+		var completed = !this.model.get('completed');
+		this.model.set('completed', completed);
+	},
+	render: function(){
+		var checked = (this.model.get('completed')) ? 'completed' : '';
+		this.$el.html(this.model.get('title') + '<input type = "checkbox"'+ checked+' >');
+		return this;
+	},
+});
+
+module.exports= TodoItemView
+},{"backbone":8}],5:[function(require,module,exports){
+var Backbone = require('backbone');
+var TodoListView = require('./TodoListView.js');
+var TodoModel = require('../models/TodoModel.js')
+
+var TodoLayoutView = Backbone.View.extend({
+	el: '<div>\
+			<form>\
+				<input type="text">\
+				<input type = "submit" value="submit">\
+			</form>\
+			<div id="todos-container"></div>\
+			<span id="num-todos"> </span> Todos (<span id="num-completed"> 0</span> Completed )\
+		<div>',
+	events:{
+		'submit form': 'addTodo' 
+	},
+	initialize: function(){
+		var that = this;
+		this.listenTo(this.collection,'change',function(event){
+			that.render();
+		});
+
+	},
+
+	addTodo: function(event){
+		event.preventDefault();
+		var todoText = this.$el.find('input[type="text"]').value
+		var todo = new TodoModel ({title:todoText});
+		this.collection.add(todo);
+		this.$el.find('input[type="text"]').val('');
+	},
+
+	render: function(){
+		var todoListView = new TodoListView({collection:this.collection});
+		todoListView.render();
+		this.$el.find('#todos-container').html(todoListView.el);
+		this.$el.find('#num-todos').text(this.collection.length);
+		var numCompleted = this.collection.where({Completed:true}).length;
+		this.$el.find('#num-completed').text(numCompleted);
+		return this
+	}
+
+})
+module.exports = TodoLayoutView;
+
+
+},{"../models/TodoModel.js":3,"./TodoListView.js":6,"backbone":8}],6:[function(require,module,exports){
+var Backbone= require('backbone');
+var TodoItemView = require('../views/TodoItemView.js');
+
+var TodoListView = Backbone.View.extend({
+	el: '<ul> </ul>',
+	initialize: function(){
+		this.listenTo(this.collection,'all',function(event){
+			console.log(event);
+		});
+	},
+
+	render: function(){
+		var that = this;
+		this.collection.each(function(todo){
+			var todoItemView = new TodoItemView({model:todo});
+			todoItemView.render();
+			that.collection.$el.append(todoItemView.el);
+			return this;
+		});
+	}
+});
+
+module.exports= TodoListView;
+},{"../views/TodoItemView.js":4,"backbone":8}],7:[function(require,module,exports){
 (function (global){
 //     Backbone.js 1.2.3
 
@@ -1973,7 +2031,7 @@ module.exports = ToDoModel;
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 
-},{"jquery":8,"underscore":9}],7:[function(require,module,exports){
+},{"jquery":9,"underscore":10}],8:[function(require,module,exports){
 (function (global){
 //     Backbone.js 1.2.3
 
@@ -3872,7 +3930,7 @@ module.exports = ToDoModel;
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 
-},{"jquery":8,"underscore":9}],8:[function(require,module,exports){
+},{"jquery":9,"underscore":10}],9:[function(require,module,exports){
 /*!
  * jQuery JavaScript Library v2.1.4
  * http://jquery.com/
@@ -13084,7 +13142,7 @@ return jQuery;
 
 }));
 
-},{}],9:[function(require,module,exports){
+},{}],10:[function(require,module,exports){
 //     Underscore.js 1.8.3
 //     http://underscorejs.org
 //     (c) 2009-2015 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
@@ -14634,7 +14692,7 @@ return jQuery;
   }
 }.call(this));
 
-},{}]},{},[3])
+},{}]},{},[1])
 
 
 //# sourceMappingURL=bundle.js.map

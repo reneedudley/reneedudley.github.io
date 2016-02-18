@@ -5,7 +5,7 @@ var TodosCollection = require('./collections/TodosCollection.js');
 var TodoLayoutView = require('./views/TodoLayoutView.js');
 
 $(function(){
-	var todo1 = new TodoModel({title:'walk the dog', completed:true});
+	var todo1 = new TodoModel({title:'walk the dog'});
 	var todo2 = new TodoModel({title:'feed the cat'});
 	var todos = new TodosCollection(([todo1,todo2]));
 	

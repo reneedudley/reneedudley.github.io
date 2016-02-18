@@ -55,3 +55,23 @@ p {
 footer.page-footer {
   margin: 0;
 }
+
+#logo-container{
+  font-family: 'Alice', serif;
+  letter-spacing:5px;
+  font-size:18px;
+  display: none;
+}
+#home{
+/*  padding-top: 9%;
+  padding-bottom: 13%;*/
+  margin-bottom: 50px;
+  background-color: #fff9db;
+}
+#mid{
+  margin: 0px;
+  padding: 0px;
+}
+
+
+
