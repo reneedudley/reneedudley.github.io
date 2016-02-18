@@ -16,7 +16,7 @@ p {
 }
 
 .button-collapse {
-  color: #26a69a;
+  color: #cfe2ab;
 }
 
 .parallax-container {
@@ -61,17 +61,41 @@ footer.page-footer {
   letter-spacing:5px;
   font-size:18px;
   display: none;
+  color: #a68a62;
+}
+#nav-mobile{
+  font-family: 'Alice', serif;
+}
+#nbar{
+  font-family: 'Alice', serif;
 }
 #home{
-/*  padding-top: 9%;
-  padding-bottom: 13%;*/
-  margin-bottom: 50px;
+
+  margin-bottom: 10px;
   background-color: #fff9db;
 }
 #mid{
   margin: 0px;
   padding: 0px;
 }
+#tag{
+  font-family: 'Alice', serif;
+  color: #f7ffe7;
+}
+#frizz{
+  opacity: .7;
+}
 
+.normal{
+  padding-top: 13%;
+  padding-bottom: 13%;
+  margin-bottom: 50px;
+}
 
+#head1{
+  font-family: 'Alice', serif;
+}
+#about{
+  color:#a68a62;
+}
 
