@@ -12,6 +12,7 @@
      <link href='https://fonts.googleapis.com/css?family=News+Cycle:400,700' rel='stylesheet' type='text/css'>
      <link href='https://fonts.googleapis.com/css?family=Raleway:400,300' rel=   'stylesheet' type='text/css'>
      <link href='https://fonts.googleapis.com/css?family=Montserrat+Subrayada|Open+Sans+Condensed:300,300italic,700' rel='stylesheet' type='text/css'>
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
      <!-- Favicon -->
      <link rel="shortcut icon" type="png" href="favicon.png"/>
@@ -28,14 +29,14 @@
           <li><a  href="#" >Logo</a></li>
           <br></br>
           <div id="space"></div>
-          <li><a  class="navfont rot" href="#">Profile</a></li>
-          <li><a  class="navfont rot" href="#">Careers</a></li>
+          <li><a  class="navfont rot profile"  href="#">Profile</a></li>
+          <li><a  class="navfont rot" href="#">Experience</a></li>
           <li><a  class="navfont rot" href="#">Skills</a></li>
           <li><a  class="navfont rot" href="#">Projects</a></li>
           <li><a  class="navfont rot" href="#">Contact</a></li>
        </ul>
        <ul class="side-nav" id="mobile-demo">
-        <li><a  class="navfont"href="#">Profile</a></li>
+        <li><a  class="navfont profile" href="#">Profile</a></li>
           <li><a class="navfont" href="#">Experience</a></li>
           <li><a class="navfont" href="#">Skills</a></li>
           <li><a  class="navfont" href="#">Projects</a></li>
@@ -43,18 +44,83 @@
        </ul>
       </div>
      <!--  header -->
-      <div class="center col s10">
+      <div class="center col s10 ">
         <h3 id="mainH">Renee Dudley</h3>
         <p class="subH">an interactive resume</p>
-        <div class="section">
-         <div class="row">
-           <div class="center col s12 navfont" id="profile">
+        <div class="section push">
+         <div class="row " id="profile">
+           <div class="center col s12 navfont" >
              <h5>About Me</h5>
              <p>I'm a front end developer and designer</p>
              <br></br>
-           <div class="col s12 center" id="pro">
-             <p>My favorite things to work on are apps and websites that take the user on a journey. The front end is where my heart is, but I am no stranger to building fast and RESTful APIs. In my spare time I like to make my own beer, run, and do kickboxing. Yes, all at the same time.</p>
+            </div>
+
+           <div class="col s12 center navfont">
+             <p>I make awesome, fast, and responsive websites and apps. The front end is where my heart is, but I've built a few RESTful APIs as well. In my spare time I like to make my own beer, run, and do kickboxing. Yes, all at the same time.</p>
+             <i class="fa fa-trophy"></i>
            </div>
+         </div>
+         <div class="row" id="exp">
+          <div class=" center col s12 navfont " >
+           <h5>Education</h5>
+           <ul class="collapsible " data-collapsible="accordion">
+            <li>
+             <div class="collapsible-header"><i class="material-icons">filter_drama</i>Rice University '13</div>
+             <div class="collapsible-body "><p>B.S. Exercise Physiology</p></div>
+            </li>
+            <li>
+             <div class="collapsible-header"><i class="material-icons">place</i>Front End Intermendiate - Austin Coding Academy</div>
+             <div class="collapsible-body"><p>Javascript, JQUERY, Backbone, GitHub, Command Line, CSS, HTML, Front End Frameworks</p></div>
+            </li>
+            <li>
+             <div class="collapsible-header"><i class="material-icons">whatshot</i>Full Stack Advanced - Austin Coding Academy</div>
+             <div class="collapsible-body"><p>MySQL, Eloquent, Laravel, Backbone, Heoku, AWS</p></div>
+            </li>
+            <li>
+             <div class="collapsible-header"><i class="material-icons">whatshot</i>Code Academy</div>
+             <div class="collapsible-body"><p>HTML, Javascript, Jquery, CSS, Interactive Website, PHP, Command Line
+             </p></div>
+            </li>
+            <li>
+             <div class="collapsible-header"><i class="material-icons">whatshot</i>Code School</div>
+             <div class="collapsible-body"><p>Git, Backbone</p></div>
+            </li>
+           </ul>
+          </div>
+          <h5 class="navfont">Careers</h5>
+           <div class=" center col s12 m4 l4 navfont " >
+            <div class="card small">
+             <div class="card-image waves-effect waves-block waves-light">
+              <img class="activator" src="osr.png">
+             </div>
+             <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4"><p class="titl">Freelance Front End Designer and Developer</p><i class="material-icons right">more_vert</i></span>
+               <p class="small"><a href="#">OSR Creative</a></p>
+             </div>
+             <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4"> <p class="titl">Launched in September 2015</p><i class="material-icons right">close</i></span> <br>
+              <p>What I do in a nutshell: I create “Relatable Digital Products” for small businesses. The goal is to provide a unique representation of the business that converts the user into a customer. TLDR: Design and Develop responsive websites. </p>
+             </div>
+            </div>
+           </div>
+           <div class=" center col s12 m4 l4 navfont " >
+            <div class="card small">
+             <div class="card-image waves-effect waves-block waves-light">
+              <img class="activator" src="box.png">
+             </div>
+             <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4"><p class="titl">Member Experience Director, <br>May 2013-Current 
+               </p><i class="material-icons right">more_vert</i></span>
+               <p class="small"><a href="#">Eastside Austin Elite</a></p>
+             </div>
+             <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span> <br>
+              <p>What I do in a nut shell: Make sure that all digital products that potential members interact with succinctly express our core values and convert them into paying members. No buzzwords: I'm in charge of all content on the website and social media. I'm currently completely redesigning website and app.</p>
+             </div>
+            </div>
+           </div>
+
+         </div>
          </div>      
         </div>
       </div>

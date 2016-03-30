@@ -83,7 +83,16 @@ footer.page-footer {
   color: black;
   font-weight: 300;
 }
-#pro{
+
+#profile{
   padding-left: 19px;
 }
-
+.push{
+padding-left: 25px;
+}
+.titl{
+  font-size: 12px;
+}
+.small{
+  font-size: 11px;
+}
