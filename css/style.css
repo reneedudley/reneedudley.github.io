@@ -55,5 +55,12 @@ footer.page-footer {
 #navback{
   background-color: transparent;
 }
-
-
+@media (min-width: 991px) {
+  main {
+    padding-left: 120px;
+  }
+}
+#mainH{
+  font-family: 'Montserrat Subrayada', sans-serif;
+  color: black;
+}
