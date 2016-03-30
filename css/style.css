@@ -57,10 +57,33 @@ footer.page-footer {
 }
 @media (min-width: 991px) {
   main {
-    padding-left: 120px;
+    padding-left: 200px;
   }
 }
 #mainH{
   font-family: 'Montserrat Subrayada', sans-serif;
   color: black;
 }
+
+#space{
+  margin:60px;
+}
+
+
+.subH{
+  font-family: 'Open Sans Condensed', sans-serif;
+  color: black;
+  font-size: 19px;
+}
+.nav{
+  border:0px;
+}
+.navfont{
+  font-family: 'Open Sans Condensed', sans-serif;
+  color: black;
+  font-weight: 300;
+}
+#pro{
+  padding-left: 19px;
+}
+
