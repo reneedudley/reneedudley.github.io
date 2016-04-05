@@ -88,6 +88,7 @@ $(function(){
     $('#three').addClass('leave');
     $('#four').addClass('leave');
      $('#six').addClass('leave');
+     $('#head').addClass('leave');
    });
 
 }); // end of document ready// end of jQuery name space
