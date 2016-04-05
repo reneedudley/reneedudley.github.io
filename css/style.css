@@ -96,3 +96,10 @@ padding-left: 20px;
 .small{
   font-size: 11px;
 }
+/*div.full {
+    height: 100vh;
+}*/
+
+.leave{
+  display: none;
+}

@@ -20,9 +20,10 @@
   <body>
 <div >
 
-   <div class="container">
+   <div class="container " >
     <div class="section">
      <div class="row">
+
      <!--  NavBar, side, fixed -->
       <div class="col s1 " id="navback">
         <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
@@ -31,46 +32,53 @@
           
           <br></br>
           <div id="space"></div>
-          <li><a  class="navfont rot profile"  href="#pro2">Profile</a></li>
-          <li><a  class="navfont rot" href="#exp">Experience</a></li>
-          <li><a  class="navfont rot" href="#abilities">Abilities</a></li>
-          <li><a  class="navfont rot" href="#work">Projects</a></li>
-          <li><a  class="navfont rot" href="#contact">Contact</a></li>
+          <li><a  class="navfont home" href="#">Home</a></li>
+          <li><a  class="navfont one " href="#pro2">Profile</a></li>
+          <li><a  class="navfont  two" href="#ed">Education</a></li>
+          <li><a  class="navfont  three"  href="#careers">Careers</a></li>
+          <li><a  class="navfont  four" href="#abilities">Abilities</a></li>
+          <li><a  class="navfont five" href="#work">Projects</a></li>
+          <li><a  class="navfont six" href="#contact">Contact</a></li>
+
        </ul>
        <ul class="side-nav" id="mobile-demo">
-        <li><a  class="navfont profile" href="#">Home</a></li>
-          <li><a  class="navfont rot profile"  href="#pro2">Profile</a></li>
-          <li><a  class="navfont rot" href="#exp">Experience</a></li>
-          <li><a  class="navfont rot" href="#abilities">Abilities</a></li>
-          <li><a  class="navfont rot" href="#work">Projects</a></li>
-          <li><a  class="navfont rot" href="#contact">Contact</a></li>
+        <li><a  class="navfont home" href="#">Home</a></li>
+          <li><a  class="navfont one " href="#pro2">Profile</a></li>
+          <li><a  class="navfont  two" href="#ed">Education</a></li>
+          <li><a  class="navfont  three"  href="#careers">Careers</a></li>
+          <li><a  class="navfont  four" href="#abilities">Abilities</a></li>
+          <li><a  class="navfont five" href="#work">Projects</a></li>
+          <li><a  class="navfont six" href="#contact">Contact</a></li>
        </ul>
       </div>
      <!--  header -->
-      <div class="center col s10 ">
+      <div class="center col s10" id="back">
         <div class="center col s12 push">
-        <h3 id="mainH">Renee Dudley</h3>
+        <a href="#" class="home"> <h3 id="mainH">Renee Dudley</h3></a>
         <p class="subH">an interactive resume</p>
         </div>
         <div class="section push">
-         <div class="row " id="profile">
-          <div class="col s12 center">
-            <img src="espresso.jpg" class="responsive-img" id="dark">
+        <div class="row">
+          <div class="full" id="seven">
+            <img src="sit2.jpg" class="responsive-img">
           </div>
-           <div class="center col s12 navfont" >
-             <h5 id="pro2">About Me</h5>
+        </div>
+         <div class="row " id="profile">
+          <div class="full leave" id="one">
+           <div class="center col s12 navfont " >
+             <h5 id="pro2">Profile</h5>
              <p>I'm a front end developer and designer</p>
-             <br></br>
-            </div>
 
            <div class="col s12 center navfont " >
              <p>I make awesome, fast, and responsive websites and apps. The front end is where my heart is, but I've built a few RESTful APIs as well. In my spare time I like to make my own beer, run, and do kickboxing. Yes, all at the same time.</p>
              <i class="fa fa-trophy"></i>
            </div>
+           </div>
          </div>
-         <div class="row" id="exp">
+         <div class="row push"  >
+          <div class="full leave" id="two">
           <div class=" center col s12 navfont " >
-           <h5>Education</h5>
+           <h5 id="ed">Education</h5>
            <ul class="collapsible " data-collapsible="accordion">
             <li>
              <div class="collapsible-header"><i class="material-icons">filter_drama</i>Rice University '13</div>
@@ -95,7 +103,10 @@
             </li>
            </ul>
           </div>
-          <h5 class="navfont">Careers</h5>
+         </div>
+          
+          <div class="full leave"  id="three">
+          <h5 class="navfont" id="careers" >Careers</h5>
            <div class=" center col s12 m4 l4 navfont " >
             <div class="card small">
              <div class="card-image waves-effect waves-block waves-light">
@@ -144,11 +155,13 @@
              </div>
             </div>
            </div>
+          </div>
 
          </div>
-         <div class="row" id="abilities">
-          <div class="col s12 navfont ">
-            <h5>Abilities</h5>
+         <div class="row " >
+         <div class="full leave" id="four">
+          <div class="col s12 navfont">
+            <h5 id="abilities">Abilities</h5>
           </div>
           <div class="col s12 m6 l6 navfont zoom ">
            <p>HTML & CSS   <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></p>
@@ -197,9 +210,11 @@
             <a class="waves-effect waves-light btn-floating" href="https://github.com/reneedudley/reneedudley.github.io/blob/master/index.html" target="_blank">Github</a>
            </div>
           </div>
-          <div class="row" id="work">
+          </div>
+          <div class="row " >
+           <div class="full leave" id="five">
             <div class="col s12 navfont">
-              <h5>Projects</h5>
+              <h5 id="work">Projects</h5>
             </div>
             <div class=" col s12 m6 l6 navfont">
              <a href="baa2.png"
@@ -233,9 +248,11 @@
               <p> see more apps and projects <a href="https://github.com/reneedudley" target="_blank">here</a></p>
             </div>
            </div>
-           <div class="row" id="contact">
+           </div>
+           <div class="row   " >
+           <div class="full leave" id="six">
              <div class="col s12 navfont">
-               <h5>Contact</h5>
+               <h5 id="contact">Contact</h5>
              </div>
              <div class="col s12 m4 l4 navfont">
                <i class="fa fa-twitter"></i> <a target="_blank" href="https://twitter.com/4reneedudley"> @4reneedudley</a>
@@ -246,6 +263,7 @@
              <div class="col s12 m4 l4 navfont">
                <i class="fa fa-envelope"></i><a target="_blank" href="mailto:renee@osrcreative.com"> renee@osrcreative.com</a>
              </div>
+           </div>
            </div>
           </div>
          </div>      
