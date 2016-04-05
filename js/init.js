@@ -1,6 +1,8 @@
-
+'use strict';
 
 $(function(){
+    console.log("Thanks for stopping bye! This site was built with Materialize and custom jQuery for the div transitions. It is a single\
+      page site. Any questions? Want to hire me? Want to buy me a beer? Email me! renee@osrcreative.com");
     $('.button-collapse').sideNav();
     $('.parallax').parallax();
     
