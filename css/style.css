@@ -103,3 +103,7 @@ padding-left: 20px;
 .leave{
   display: none;
 }
+
+#sit{
+  height: 100vh;
+}

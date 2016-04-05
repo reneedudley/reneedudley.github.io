@@ -20,6 +20,7 @@ $(function(){
    });
    $('.one').click(function(){
     $('#one').removeClass('leave');
+    $('#head').removeClass('leave');
     $('#two').addClass('leave');
     $('#three').addClass('leave');
     $('#four').addClass('leave');
@@ -29,6 +30,7 @@ $(function(){
    });
    $('.two').click(function(){
     $('#two').removeClass('leave');
+    $('#head').removeClass('leave');
     $('#three').addClass('leave');
     $('#four').addClass('leave');
     $('#five').addClass('leave');
@@ -38,6 +40,7 @@ $(function(){
    });
    $('.three').click(function(){
     $('#three').removeClass('leave');
+    $('#head').removeClass('leave');
     $('#two').addClass('leave');
     $('#four').addClass('leave');
     $('#five').addClass('leave');
@@ -47,6 +50,7 @@ $(function(){
    });
    $('.four').click(function(){
     $('#four').removeClass('leave');
+    $('#head').removeClass('leave');
     $('#two').addClass('leave');
     $('#five').addClass('leave');
     $('#six').addClass('leave');
@@ -56,6 +60,7 @@ $(function(){
    });
    $('.five').click(function(){
     $('#five').removeClass('leave');
+    $('#head').removeClass('leave');
     $('#two').addClass('leave');
     $('#six').addClass('leave');
     $('#one').addClass('leave');
@@ -65,6 +70,7 @@ $(function(){
    });
    $('.six').click(function(){
     $('#six').removeClass('leave');
+    $('#head').removeClass('leave');
     $('#two').addClass('leave');
     $('#five').addClass('leave');
     $('#one').addClass('leave');
@@ -75,6 +81,7 @@ $(function(){
 
    $('.home').click(function(){
     $('#seven').removeClass('leave');
+    $('#head').removeClass('leave');
     $('#two').addClass('leave');
     $('#five').addClass('leave');
     $('#one').addClass('leave');
