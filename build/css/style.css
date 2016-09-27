@@ -1,0 +1,235 @@
+#index-banner {
+  height: 100vh;
+  overflow: inherit;
+}
+#nav {
+  background-color: rgba(10,10,10,0.67);
+}
+.nav-links {
+  font-family: 'Just Me Again Down Here', cursive;
+}
+.polariod {
+  height: 250px;
+}
+#folder {
+  font-size: 140px;
+  -webkit-transform: rotate(7deg) /* Chrome, Safari, Opera */;
+  transform: rotate(7deg);
+  color: rgba(100,172,234,0.87);
+}
+@font-face {
+  font-family: 'Blackhawk';
+  src: url("../css/fonts/Blackhawk/Blackhawk.eot");
+  src: url("../css/fonts/Blackhawk/Blackhawk.eot?#iefix") format('embedded-opentype'), url("../css/fonts/Blackhawk/Blackhawk.woff") format('woff'), url("../css/fonts/Blackhawk/Blackhawk.ttf") format('truetype'), url("../css/fonts/Blackhawk/Blackhawk.svg#Blackhawk") format('svg');
+}
+@font-face {
+  font-family: 'Violetta';
+  src: url("../css/fonts/Script/Violetta Script.eot");
+  src: url("../css/fonts/Script/Violetta Script.eot?#iefix") format('embedded-opentype'), url("../css/fonts/Script/Violetta Script.woff") format('woff'), url("../css/fonts/Script/Violetta Script.ttf") format('truetype'), url("../css/fonts/Script/Violetta Script.svg#Violetta Script") format('svg');
+}
+.greeting {
+  font-family: 'Blackhawk';
+  font-size: 200px;
+  color: #7d48ad;
+}
+.home-background {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.tagline {
+  font-family: 'Open Sans Condensed', sans-serif;
+  background-color: #f0f8ff;
+}
+.beach {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-style: italic;
+  background: #dcc3e8;
+  color: #000;
+  -webkit-transform: rotate(3deg);
+  transform: rotate(3deg);
+  padding: 10px;
+}
+.brand-logo {
+  font-family: Violetta;
+}
+.nav-text {
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+  font-size: 1.4rem;
+  color: #fff;
+  display: block;
+  padding: 0 40px;
+  cursor: pointer;
+}
+.about-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: Blackhawk;
+  color: #a70297;
+}
+.about-text {
+  font-family: 'Open Sans Condensed', sans-serif;
+  color: #000;
+}
+.about {
+  font-size: 100px;
+}
+.about-p1 {
+  font-size: 25px;
+  padding: 10px;
+  background: #f0f8ff;
+}
+.about-p2 {
+  font-size: 25px;
+  padding: 5px;
+  background: #ddd3f5;
+}
+.about-p3 {
+  font-size: 25px;
+  padding: 5px;
+  background: #c3fbfb;
+}
+.port-header {
+  font-family: Blackhawk;
+  font-size: 140px;
+  color: #1fc1ea;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.port-text {
+  background: rgba(240,248,255,0.94);
+  font-size: 20px;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+.port-card {
+  width: 350px;
+}
+.port {
+  font-size: 80px;
+  padding-left: 10px;
+}
+.built {
+  font-size: 20px;
+  font-family: 'Open Sans Condensed', sans-serif;
+  background: #6ccfd2;
+  padding: 5px;
+}
+.skill-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  font-size: 25px;
+  -webkit-box-flex: 0.33;
+      -ms-flex: 0.33;
+          flex: 0.33;
+}
+.skill-name {
+  font-family: 'Open Sans Condensed', sans-serif;
+  padding: 10px;
+  background: rgba(240,255,255,0.91);
+}
+.skills {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.starRow {
+  color: #552bec;
+}
+.contact-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+#contactForm {
+  padding: 100px;
+  background: rgba(240,248,255,0.93);
+}
+#contactForm .input-field label {
+  color: #0c0c0c;
+  font-family: 'Open Sans Condensed', sans-serif;
+  padding: 2px;
+  background: #84f3f3;
+  font-size: 16px;
+}
+#contactForm .input-field input[type=text]:focus + label {
+  color: #0c0c0c;
+  font-family: 'Open Sans Condensed', sans-serif;
+  padding: 2px;
+  background: #84f3f3;
+  font-size: 16px;
+}
+#contactForm .input-field input[type=text]:focus {
+  border-bottom: 1px solid #961cde;
+  box-shadow: 0 1px 0 0 #000;
+}
+#contactForm .materialize-textarea:focus {
+  border-bottom: 1px solid #961cde;
+  box-shadow: 0 1px 0 0 #000;
+}
+#contactForm .materialize-textarea:focus + label {
+  color: #0c0c0c;
+  font-family: 'Open Sans Condensed', sans-serif;
+  padding: 2px;
+  background: #84f3f3;
+  font-size: 16px;
+}
+.con {
+  font-family: Blackhawk;
+  padding-left: 20px;
+  color: rgba(84,123,156,0.91);
+  font-size: 100px;
+}
+#submitButton {
+  background-color: #747da7;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 20px;
+}
+.direct {
+  padding-left: 40px;
+  background: #747da7;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-size: 18px;
+}
+.links {
+  color: #fff;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 20px;
+}
